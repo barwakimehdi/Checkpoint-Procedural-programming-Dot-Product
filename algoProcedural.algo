@@ -1,0 +1,30 @@
+
+
+PROCEDURE dot_product(V1,V2,sum)
+VAR
+   V1 : ARRAY_OF INTEGER[2];
+    V2: ARRAY_OF INTEGER[2];
+    sum=0
+BEGIN
+IF (V1.length == V2.length) DO
+    FOR i FROM 0 TO 2 STEP 1  DO
+        sum=sum+V1[i]*V2[i]
+END_FOR
+END_IF
+END
+
+
+
+ALGORITHM Number_of_orthogonal_vector
+VAR
+    i,j:=INTEGER
+BEGIN
+FOR i FROM 0 TO V2.length STEP 1  DO
+FOR j FROM 0 TO V2.length STEP 1  DO
+    dot_product(V1[i],V2[j])
+   IF (dot_product==0) THEN
+    WRITE ("those vector are orthogonal:V1"+V1+"V2"V2 )
+   END_IF
+END_FOR
+END_FOR 
+END
